@@ -46,7 +46,22 @@ public class BigDecimalExample {
 		}
 		
 		
-
+		/**
+		 * More Examples using BigDecimal
+		 */
+		//get the negated 
+		BigDecimal dec = new BigDecimal("500");
+		System.out.println(dec.signum()); //should return 1 it is positive
+		System.out.println(dec + " negated is: " + dec.negate());
+		System.out.println("calling negate() again gives us: " +dec.negate());
+		System.out.println("BigDecimal.negate() returns a BigDecimal, it doesn't change the original: " +dec);
+		
+		//Negate negative number to get the positive of it
+		BigDecimal dec1 = new BigDecimal("-120");
+		System.out.println("BigDecimal number is: " +dec1);
+		System.out.println(dec1.signum()); //should return -1 it is negative
+		System.out.println("Calling BigDecimal.negate() will return a BigDecimal containing +this: " +dec1.negate());
+		System.out.println(dec1.signum()); //still -1 remember the value did not change for dec1 t
 	}
 
 }
